@@ -75,5 +75,3 @@ Feel free to submit pull requests to enhance the functionality of the bot or to 
 
 This bot is intended for educational and personal use. Please comply with the respective platform's terms of service when downloading content.
 ```
-
-This README gives an overview of the project, setup instructions, usage examples, and contribution guidelines. It should help new users get started quickly with your Telegram bot project!
