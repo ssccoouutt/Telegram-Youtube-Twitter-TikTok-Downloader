@@ -1,4 +1,4 @@
-### Telegram Media Downloader (Youtube, Twitter and TikTok:
+### Telegram Media Downloader (Youtube, Twitter and TikTok):
 
 ![Telegram Media Downloader Cover](images/ImagenPortada.webp)
 
