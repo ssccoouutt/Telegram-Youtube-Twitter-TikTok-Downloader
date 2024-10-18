@@ -76,4 +76,3 @@ Feel free to submit pull requests to enhance the functionality of the bot or to 
 ### Disclaimer
 
 This bot is intended for educational and personal use. Please comply with the respective platform's terms of service when downloading content.
-```
