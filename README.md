@@ -14,7 +14,7 @@
 
 ## Requirements
 
-To run this bot, you'll need the following dependencies installed:
+To run this bot, you'll need the following dependencies installed (make sure to use the updated versions to avoid issues):
 
 - Python 3.7+
 - `yt-dlp` for downloading media
