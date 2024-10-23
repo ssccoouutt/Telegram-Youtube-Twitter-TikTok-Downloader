@@ -8,13 +8,11 @@
 
 <div align="center">
 
-![GitHub](https://img.shields.io/github/license/tuusuario/teledown-bot)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-0088cc)
 
 <h3>Bot de Telegram para descargar videos y audio de YouTube, Twitter/X y TikTok</h3>
 
-[Documentación](docs/) |
 [Reportar Bug](../../issues) |
 [Solicitar Feature](../../issues)
 
@@ -140,6 +138,5 @@ Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
 ## 📞 Soporte
 
 - Abre un [issue](../../issues) para reportar bugs
-- Únete a nuestro [grupo de Telegram](https://t.me/teledown_support)
 
 ---
