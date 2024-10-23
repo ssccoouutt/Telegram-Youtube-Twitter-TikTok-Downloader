@@ -4,75 +4,142 @@
 
 **Telegram Media Downloader** is a Python-based bot designed to download videos and audios from platforms like YouTube, Twitter/X, and TikTok. If the file exceeds Telegram's 50 MB limit, it automatically compresses the file using `ffmpeg` and sends it to the user. This bot allows easy downloading and conversion of media through simple commands.
 
-## Features
+# 🎥 TeleDown Bot
 
-- Download videos and audios from YouTube, Twitter/X, and TikTok.
-- Automatically compresses videos larger than 50 MB using `ffmpeg`.
-- Provides real-time download progress through Telegram messages.
-- Supports both video and audio downloads.
-- Simple commands for downloading and managing media files.
+<div align="center">
 
-## Requirements
+![GitHub](https://img.shields.io/github/license/tuusuario/teledown-bot)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![Telegram](https://img.shields.io/badge/Telegram-Bot-0088cc)
 
-To run this bot, you'll need the following dependencies installed (make sure to use the updated versions to avoid issues):
+<h3>Bot de Telegram para descargar videos y audio de YouTube, Twitter/X y TikTok</h3>
 
-- Python 3.7+
-- `yt-dlp` for downloading media
-- `ffmpeg` for video compression
-- `python-telegram-bot` library for bot functionality
+[Documentación](docs/) |
+[Reportar Bug](../../issues) |
+[Solicitar Feature](../../issues)
 
-Install the dependencies using pip:
+</div>
 
+## 📱 Características
+
+- 📥 Descarga videos de:
+  - YouTube
+  - Twitter/X
+  - TikTok
+- 🎵 Extracción de audio en formato MP3
+- 📊 Barra de progreso en tiempo real
+- 🔄 Conversión automática de formatos
+- 💾 Gestión inteligente del almacenamiento temporal
+- ⚡ Procesamiento asíncrono para mejor rendimiento
+
+## 🚀 Instalación
+
+1. **Clona el repositorio**
 ```bash
-pip install yt-dlp python-telegram-bot asyncio
+git clone https://github.com/tuusuario/teledown-bot.git
+cd teledown-bot
 ```
 
-## Setup
+2. **Crea un entorno virtual**
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+```
 
-1. **API Token**: Get your API token from [BotFather](https://core.telegram.org/bots#botfather) on Telegram and update the `API_TOKEN` in the script.
-2. **Download Folder**: Set the `TEMP_DOWNLOAD_FOLDER` to a temporary folder where you want media to be downloaded and processed.
-3. **ffmpeg Installation**: Make sure `ffmpeg` is installed and available in your system's PATH. You can download it from [ffmpeg.org](https://ffmpeg.org/download.html).
+3. **Instala las dependencias**
+```bash
+pip install -r requirements.txt
+```
 
-## Usage
+4. **Configura el bot**
+- Obtén un token de @BotFather en Telegram
+- Crea un archivo `.env` basado en `.env.example`
+```env
+API_TOKEN=tu_token_aqui
+TEMP_DOWNLOAD_FOLDER=/ruta/a/carpeta/temporal
+```
 
-- Start the bot using the following command:
-
+5. **Inicia el bot**
 ```bash
 python bot.py
 ```
 
-- Send `/start` in the bot chat to receive instructions.
-- Use the `/download <url>` command to download media. For example:
+## 💡 Uso
+
+### Comandos Disponibles
+
+| Comando | Descripción | Ejemplo |
+|---------|-------------|---------|
+| `/start` | Inicia el bot y muestra instrucciones | `/start` |
+| `/video` | Descarga un video | `/video https://youtube.com/...` |
+| `/audio` | Extrae el audio de un video | `/audio https://youtube.com/...` |
+| `/help` | Muestra ayuda y comandos disponibles | `/help` |
+
+### Ejemplos de Uso
+
+```plaintext
+1. Descargar video de YouTube:
+/video https://youtube.com/watch?v=...
+
+2. Extraer audio de video de Twitter:
+/audio https://twitter.com/user/status/...
+
+3. Descargar video de TikTok:
+/video https://tiktok.com/@user/video/...
+```
+
+## ⚙️ Configuración
+
+### Variables de Entorno
+
+| Variable | Descripción | Valor por defecto |
+|----------|-------------|-------------------|
+| `API_TOKEN` | Token del bot de Telegram | - |
+| `TEMP_DOWNLOAD_FOLDER` | Carpeta temporal | `./downloads` |
+| `TELEGRAM_MAX_SIZE_MB` | Límite de tamaño | `50` |
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Python 3.8+**
+- **python-telegram-bot**: Framework para bots de Telegram
+- **yt-dlp**: Librería para descargar contenido multimedia
+- **asyncio**: Para operaciones asíncronas
+
+## 📂 Estructura del Proyecto
 
 ```
-/download https://www.youtube.com/watch?v=example
+teledown-bot/
+├── bot.py              # Código principal del bot
+├── requirements.txt    # Dependencias del proyecto
+├── .env               # Variables de entorno
+├── .gitignore         # Archivos ignorados por git
+└── README.md          # Documentación
 ```
 
-By default, the bot will download videos. To download audio, you can specify the format:
+## 🤝 Contribuir
 
-```
-/download https://www.youtube.com/watch?v=example audio
-```
+Las contribuciones son bienvenidas. Por favor:
 
-## Compression
+1. Haz un Fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add: nueva característica'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-If the downloaded media file exceeds the 50 MB limit imposed by Telegram, the bot will automatically compress the video to fit within the size restriction using `ffmpeg`.
+## 📝 Licencia
 
-## Example Commands
+Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
 
-- `/start`: Introduction and usage instructions.
-- `/download <url> [audio]`: Download a video or audio from the given URL.
+## ⚠️ Limitaciones
 
-## License
+- Tamaño máximo de archivo: 50MB (límite de Telegram)
+- Algunos videos pueden no estar disponibles para descarga
+- Las descargas dependen de la velocidad de conexión
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## 📞 Soporte
 
-## Contributions
-
-Feel free to submit pull requests to enhance the functionality of the bot or to fix any issues. All contributions are welcome!
+- Abre un [issue](../../issues) para reportar bugs
+- Únete a nuestro [grupo de Telegram](https://t.me/teledown_support)
 
 ---
-
-### Disclaimer
-
-This bot is intended for educational and personal use. Please comply with the respective platform's terms of service when downloading content.
