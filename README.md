@@ -1,142 +1,118 @@
 ### Telegram Media Downloader (Youtube, Twitter and TikTok):
-
 ![Telegram Media Downloader Cover](images/Twitter_Youtube_TikTok_Telegram.webp)
-
 **Telegram Media Downloader** is a Python-based bot designed to download videos and audios from platforms like YouTube, Twitter/X, and TikTok. If the file exceeds Telegram's 50 MB limit, it automatically compresses the file using `ffmpeg` and sends it to the user. This bot allows easy downloading and conversion of media through simple commands.
 
 # 🎥 TeleDown Bot
-
 <div align="center">
-
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-0088cc)
-
-<h3>Bot de Telegram para descargar videos y audio de YouTube, Twitter/X y TikTok</h3>
-
-[Reportar Bug](../../issues) |
-[Solicitar Feature](../../issues)
-
+<h3>Telegram Bot for downloading videos and audio from YouTube, Twitter/X and TikTok</h3>
+[Report Bug](../../issues) |
+[Request Feature](../../issues)
 </div>
 
-## 📱 Características
-
-- 📥 Descarga videos de:
+## 📱 Features
+- 📥 Download videos from:
   - YouTube
   - Twitter/X
   - TikTok
-- 🎵 Extracción de audio en formato MP3
-- 📊 Barra de progreso en tiempo real
-- 🔄 Conversión automática de formatos
-- 💾 Gestión inteligente del almacenamiento temporal
-- ⚡ Procesamiento asíncrono para mejor rendimiento
+- 🎵 Audio extraction in MP3 format
+- 📊 Real-time progress bar
+- 🔄 Automatic format conversion
+- 💾 Smart temporary storage management
+- ⚡ Asynchronous processing for better performance
 
-## 🚀 Instalación
-
-1. **Clona el repositorio**
+## 🚀 Installation
+1. **Clone the repository**
 ```bash
-git clone https://github.com/tuusuario/teledown-bot.git
+git clone https://github.com/yourusername/teledown-bot.git
 cd teledown-bot
 ```
 
-2. **Crea un entorno virtual**
+2. **Create a virtual environment**
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
 
-3. **Instala las dependencias**
+3. **Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-4. **Configura el bot**
-- Obtén un token de @BotFather en Telegram
-- Crea un archivo `.env` basado en `.env.example`
+4. **Configure the bot**
+- Get a token from @BotFather on Telegram
+- Create a `.env` file based on `.env.example`
 ```env
-API_TOKEN=tu_token_aqui
-TEMP_DOWNLOAD_FOLDER=/ruta/a/carpeta/temporal
+API_TOKEN=your_token_here
+TEMP_DOWNLOAD_FOLDER=/path/to/temp/folder
 ```
 
-5. **Inicia el bot**
+5. **Start the bot**
 ```bash
 python bot.py
 ```
 
-## 💡 Uso
-
-### Comandos Disponibles
-
-| Comando | Descripción | Ejemplo |
+## 💡 Usage
+### Available Commands
+| Command | Description | Example |
 |---------|-------------|---------|
-| `/start` | Inicia el bot y muestra instrucciones | `/start` |
-| `/video` | Descarga un video | `/video https://youtube.com/...` |
-| `/audio` | Extrae el audio de un video | `/audio https://youtube.com/...` |
-| `/help` | Muestra ayuda y comandos disponibles | `/help` |
+| `/start` | Start the bot and show instructions | `/start` |
+| `/video` | Download a video | `/video https://youtube.com/...` |
+| `/audio` | Extract audio from a video | `/audio https://youtube.com/...` |
+| `/help` | Show help and available commands | `/help` |
 
-### Ejemplos de Uso
-
+### Usage Examples
 ```plaintext
-1. Descargar video de YouTube:
+1. Download YouTube video:
 /video https://youtube.com/watch?v=...
-
-2. Extraer audio de video de Twitter:
+2. Extract audio from Twitter video:
 /audio https://twitter.com/user/status/...
-
-3. Descargar video de TikTok:
+3. Download TikTok video:
 /video https://tiktok.com/@user/video/...
 ```
 
-## ⚙️ Configuración
+## ⚙️ Configuration
+### Environment Variables
+| Variable | Description | Default Value |
+|----------|-------------|---------------|
+| `API_TOKEN` | Telegram Bot Token | - |
+| `TEMP_DOWNLOAD_FOLDER` | Temporary folder | `./downloads` |
+| `TELEGRAM_MAX_SIZE_MB` | Size limit | `50` |
 
-### Variables de Entorno
-
-| Variable | Descripción | Valor por defecto |
-|----------|-------------|-------------------|
-| `API_TOKEN` | Token del bot de Telegram | - |
-| `TEMP_DOWNLOAD_FOLDER` | Carpeta temporal | `./downloads` |
-| `TELEGRAM_MAX_SIZE_MB` | Límite de tamaño | `50` |
-
-## 🛠️ Tecnologías Utilizadas
-
+## 🛠️ Technologies Used
 - **Python 3.8+**
-- **python-telegram-bot**: Framework para bots de Telegram
-- **yt-dlp**: Librería para descargar contenido multimedia
-- **asyncio**: Para operaciones asíncronas
+- **python-telegram-bot**: Telegram bot framework
+- **yt-dlp**: Multimedia content download library
+- **asyncio**: For asynchronous operations
 
-## 📂 Estructura del Proyecto
-
+## 📂 Project Structure
 ```
 teledown-bot/
-├── bot.py              # Código principal del bot
-├── requirements.txt    # Dependencias del proyecto
-├── .env               # Variables de entorno
-├── .gitignore         # Archivos ignorados por git
-└── README.md          # Documentación
+├── bot.py              # Main bot code
+├── requirements.txt    # Project dependencies
+├── .env               # Environment variables
+├── .gitignore         # Files ignored by git
+└── README.md          # Documentation
 ```
 
-## 🤝 Contribuir
+## 🤝 Contributing
+Contributions are welcome. Please:
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add: new feature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Las contribuciones son bienvenidas. Por favor:
+## 📝 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
-1. Haz un Fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add: nueva característica'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+## ⚠️ Limitations
+- Maximum file size: 50MB (Telegram limit)
+- Some videos may not be available for download
+- Downloads depend on connection speed
 
-## 📝 Licencia
-
-Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
-
-## ⚠️ Limitaciones
-
-- Tamaño máximo de archivo: 50MB (límite de Telegram)
-- Algunos videos pueden no estar disponibles para descarga
-- Las descargas dependen de la velocidad de conexión
-
-## 📞 Soporte
-
-- Abre un [issue](../../issues) para reportar bugs
-
+## 📞 Support
+- Open an [issue](../../issues) to report bugs
 ---
