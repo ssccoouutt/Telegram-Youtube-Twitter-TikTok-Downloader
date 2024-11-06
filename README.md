@@ -6,9 +6,9 @@
 <div align="center">
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Telegram](https://img.shields.io/badge/Telegram-Bot-0088cc)
-<h3>Bot de Telegram para descargar videos y audio de YouTube, Twitter/X y TikTok</h3>
-[Reportar Bug](../../issues) |
-[Solicitar Feature](../../issues)
+<h3>Telegram Bot for downloading videos and audio from YouTube, Twitter/X and TikTok</h3>
+[Report Bug](../../issues) |
+[Request Feature](../../issues)
 </div>
 
 ## 📱 Features
