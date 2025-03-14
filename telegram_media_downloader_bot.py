@@ -6,11 +6,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackContext
 from telegram.error import TelegramError
 
-# API Token for the bot (obtained from @BotFather)
-API_TOKEN = 'YOUR-API-TOKEN'
-
-# Temporary download path
-TEMP_DOWNLOAD_FOLDER = r'C:\Users\'
+# API Token for the bot (obtained from environment variable)
+API_TOKEN = os.environ.get('API_TOKEN')  # Fetch API_TOKEN from environment variable
 
 # Telegram size limit (50 MB)
 TELEGRAM_MAX_SIZE_MB = 50
@@ -88,7 +85,7 @@ async def download(update: Update, context: CallbackContext):
             params = message_text.split(" ")
             url = params[1]  # Extract the URL after the command
             format = "video" if len(params) < 3 or params[2].lower() != "audio" else "audio"
-            destination_folder = TEMP_DOWNLOAD_FOLDER  # Use the temporary download folder
+            destination_folder = os.getenv('TEMP', '/tmp')  # Use the default temporary directory provided by Railway
 
             # Send the initial message and keep it for updates
             message = await update.message.reply_text(f'Starting the {format} download from: {url}')
